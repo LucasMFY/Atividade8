@@ -1,46 +1,85 @@
 function b01Soma(a, b) {
+  return a + b;
 }
 
 function b02ParOuImpar(a) {
+  return a%2==0?"par":"impar";
 }
 
 function b03MaiorDeDois(a, b) {
+  return a>=b?a:b;
 }
 
 function b04ContarAteN(a) {
+  let array = [];
+  for (let index = 1; index <= a; index++) {
+    array[index-1] = index;    
+  }
+  return array;
 }
 
 function b05SomaDe1AteN(a) {
+  let soma = 0;
+  for (let index = 1; index <= a; index++){
+    soma+=index;
+  }
+  return soma;
 }
 
 function b06Tabuada(a) {
+  let array = [];
+  for(let i=1; i<11; i++){
+    array[i-1] = a*i;
+  }
+  return array;
 }
 
 function b07ParesAteN(a) {
+  let array = [];
+  let index = 0;
+  for(let i=2; i<=a; i=i+2){
+    array[index] = i;
+    index++;
+  }
+  return array;
 }
 
 function b08ContarVogais(frase) {
+  //let array = [...frase]; //frase.split('');
+  let vogais = ['A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u'];
+  let contagem = 0;
+  for(let i=0; i<frase.length; i++){
+    if(vogais.includes(frase.charAt(i))){contagem++;}
+  }
+  return contagem;
 }
 
 function b09InverterTexto(texto) {
+  return texto.split('').reverse().join('');  
 }
 
 function b10MaiorNumero(array) {
+  return array.reduce( (maior, atual) => atual>maior?atual:maior);
 }
 
 function b11MenorNumero(array) {
+  return array.reduce( (menor, atual) => atual<menor?atual:menor);
 }
 
 function b12DobrarNumeros(array) {
+  return array.map(item => item*2);
 }
 
 function b13FiltrarPares(array) {
+  return array.filter(item => item%2==0);
 }
 
 function b14SomarArray(array) {
+  return array.reduce( (soma, atual) => soma+atual, 0 );
 }
 
 function b15EncontrarNome(array, busca) {
+  return array.find( item => item == busca);
 }
 
 function b16TemNegativo(array) {
