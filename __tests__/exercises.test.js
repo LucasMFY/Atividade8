@@ -1,0 +1,37 @@
+const ex = require("../src/exercises");
+
+describe("33 exercicios basicos", () => {
+  test("basico 01 - b01Soma: retorna a soma de dois numeros", () => expect(ex.b01Soma(2, 3)).toBe(5));
+  test("basico 02 - b02ParOuImpar: retorna 'par' ou 'impar'", () => expect(ex.b02ParOuImpar(7)).toBe("impar"));
+  test("basico 03 - b03MaiorDeDois: retorna o maior numero", () => expect(ex.b03MaiorDeDois(8, 4)).toBe(8));
+  test("basico 04 - b04ContarAteN: cria array de 1 ate n", () => expect(ex.b04ContarAteN(5)).toEqual([1, 2, 3, 4, 5]));
+  test("basico 05 - b05SomaDe1AteN: soma de 1 ate n", () => expect(ex.b05SomaDe1AteN(5)).toBe(15));
+  test("basico 06 - b06Tabuada: tabuada de 1 a 10", () => expect(ex.b06Tabuada(3)).toEqual([3, 6, 9, 12, 15, 18, 21, 24, 27, 30]));
+  test("basico 07 - b07ParesAteN: lista pares ate n", () => expect(ex.b07ParesAteN(8)).toEqual([2, 4, 6, 8]));
+  test("basico 08 - b08ContarVogais: conta vogais sem diferenciar maiusculas", () => expect(ex.b08ContarVogais("JavaScript")).toBe(3));
+  test("basico 09 - b09InverterTexto: inverte uma string", () => expect(ex.b09InverterTexto("teste")).toBe("etset"));
+  test("basico 10 - b10MaiorNumero: maior numero do array", () => expect(ex.b10MaiorNumero([3, 9, 1, 6])).toBe(9));
+  test("basico 11 - b11MenorNumero: menor numero do array", () => expect(ex.b11MenorNumero([3, -2, 10, 0])).toBe(-2));
+  test("basico 12 - b12DobrarNumeros: usa map para dobrar", () => expect(ex.b12DobrarNumeros([1, 2, 3])).toEqual([2, 4, 6]));
+  test("basico 13 - b13FiltrarPares: usa filter para pares", () => expect(ex.b13FiltrarPares([1, 2, 3, 4])).toEqual([2, 4]));
+  test("basico 14 - b14SomarArray: usa reduce para somar", () => expect(ex.b14SomarArray([1, 2, 3, 4])).toBe(10));
+  test("basico 15 - b15EncontrarNome: usa find para localizar nome", () => expect(ex.b15EncontrarNome(["Ana", "Rafa", "Bia"], "Rafa")).toBe("Rafa"));
+  test("basico 16 - b16TemNegativo: usa some para negativo", () => expect(ex.b16TemNegativo([1, 2, -3])).toBe(true));
+  test("basico 17 - b17TodosPositivos: usa every para positivos", () => expect(ex.b17TodosPositivos([1, 2, 3])).toBe(true));
+  test("basico 18 - b18PrimeiroMaiorQue: primeiro numero maior que limite", () => expect(ex.b18PrimeiroMaiorQue([4, 7, 10], 6)).toBe(7));
+  test("basico 19 - b19ContarPalavras: conta palavras ignorando espacos extras", () => expect(ex.b19ContarPalavras("  ola mundo JS  ")).toBe(3));
+  test("basico 20 - b20Capitalizar: primeira letra maiuscula", () => expect(ex.b20Capitalizar("rafael")).toBe("Rafael"));
+  test("basico 21 - b21RemoverDuplicados: remove duplicados com Set", () => expect(ex.b21RemoverDuplicados([1, 2, 2, 3, 1])).toEqual([1, 2, 3]));
+  test("basico 22 - b22CriarMapaDePrecos: cria Map produto -> preco", () => expect(ex.b22CriarMapaDePrecos([{ nome: "arroz", preco: 8 }]).get("arroz")).toBe(8));
+  test("basico 23 - b23PegarValorObjeto: pega valor pela chave", () => expect(ex.b23PegarValorObjeto({ nome: "Rafa" }, "nome")).toBe("Rafa"));
+  test("basico 24 - b24SomarValoresObjeto: soma valores numericos de objeto", () => expect(ex.b24SomarValoresObjeto({ a: 2, b: 3, c: "x" })).toBe(5));
+  test("basico 25 - b25MesDaData: retorna mes de 1 a 12", () => expect(ex.b25MesDaData(new Date("2026-08-05T00:00:00Z"))).toBe(8));
+  test("basico 26 - b26FormatarDataBR: formata dd/mm/aaaa em UTC", () => expect(ex.b26FormatarDataBR(new Date("2026-08-05T00:00:00Z"))).toBe("05/08/2026"));
+  test("basico 27 - b27EhBissexto: valida ano bissexto", () => expect(ex.b27EhBissexto(2024)).toBe(true));
+  test("basico 28 - b28UltimoItem: retorna ultimo item", () => expect(ex.b28UltimoItem(["a", "b", "c"])).toBe("c"));
+  test("basico 29 - b29GerarRange: gera range inclusivo", () => expect(ex.b29GerarRange(3, 6)).toEqual([3, 4, 5, 6]));
+  test("basico 30 - b30Media: calcula media aritmetica", () => expect(ex.b30Media([8, 10, 6])).toBe(8));
+  test("basico 31 - b31ClassificarNota: aprovado >= 7, recuperacao >= 5, reprovado", () => expect(ex.b31ClassificarNota(6)).toBe("recuperacao"));
+  test("basico 32 - b32JuntarNomes: junta nomes com virgula", () => expect(ex.b32JuntarNomes(["Ana", "Bia", "Caio"])).toBe("Ana, Bia, Caio"));
+  test("basico 33 - b33ContemPropriedade: verifica chave propria", () => expect(ex.b33ContemPropriedade({ a: 1 }, "a")).toBe(true));
+});
